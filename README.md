@@ -2,8 +2,8 @@
 
 [cite_start]Acadia is a smart, personalized study planner designed to help students manage their time effectively, reduce stress, and improve academic performance. [cite: 33, 35] [cite_start]This project provides a structured and automated approach to balancing multiple subjects and deadlines, moving beyond simple calendars and to-do lists. [cite: 34, 40]
 
-![Dashboard Screenshot](image_of_dashboard.png) 
-*(You can replace this with a real screenshot of your `dashboard.html`)*
+<img width="1905" height="1011" alt="image" src="https://github.com/user-attachments/assets/c1cf3bbe-c01f-4609-b886-9c1a751266ed" />
+
 
 ---
 
