@@ -145,10 +145,138 @@ button[type="submit"]:hover { background-color: var(--primary-hover); }
 #chat-send-btn:hover { background-color: var(--primary-hover); }
 /* --- style.css --- */
 
-/* REPLACE the old .popup-menu rule with this one */
+/* Additional styles for new pages */
+.profile-card,
+.chart-container,
+.data-table-container,
+.task-list-container,
+.deadlines-container,
+.achievements-container {
+    background-color: var(--card-background);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    margin-bottom: 24px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.profile-card {
+    text-align: center;
+}
+.profile-header {
+    margin-bottom: 24px;
+}
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+.profile-avatar svg {
+    color: var(--text-muted);
+}
+.profile-card h2 {
+    margin: 0;
+}
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.detail-item {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    transition: background-color var(--transition-speed) ease;
+}
+.detail-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+.detail-value {
+    font-weight: bold;
+    margin: 4px 0 0;
+}
+.profile-edit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.profile-edit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.chart-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#study-hours-chart {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+.data-table th {
+    font-weight: bold;
+    color: var(--text-muted);
+}
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.task-list-item,
+.deadline-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 12px;
+    transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+.task-list-item:hover,
+.deadline-item:hover {
+    background-color: var(--background-color);
+}
+.task-item-content h3,
+.deadline-content h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.task-item-content p,
+.deadline-content p {
+    margin: 4px 0 0;
+}
+
 .popup-menu {
     position: absolute;
-    top: 55px;     /* Reduced from 65px to close the gap */
+    top: 55px;
     left: 24px;
     width: 220px;
     background-color: var(--card-background);
@@ -166,3 +294,63 @@ button[type="submit"]:hover { background-color: var(--primary-hover); }
 .popup-menu .menu-item { display: flex; align-items: center; gap: 15px; padding: 12px 15px; text-decoration: none; color: var(--text-color); border-radius: 8px; font-weight: 500; transition: background-color 0.2s ease; }
 .popup-menu .menu-item:hover { background-color: var(--background-color); }
 .popup-menu .menu-item.logout { color: var(--primary-color); }
+
+/* New styles for the Achievements section */
+.achievements-container {
+    margin-top: 24px;
+}
+
+.achievements-header h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.achievement-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color var(--transition-speed) ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.achievement-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.achievement-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+}
+
+.achievement-content h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.achievement-content p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}

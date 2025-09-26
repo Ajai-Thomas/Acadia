@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Acadia Planner</title>
+    <title>Tasks Completed - Acadia Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,7 +43,6 @@
                     </a>
                 </nav>
             </div>
-
             <div class="progress-chart">
                 <div class="chart-inner-text">
                     <span class="chart-percentage">72%</span>
@@ -58,7 +57,6 @@
             <div class="quote-block">
                 <p>"The secret of getting ahead is getting started."</p>
             </div>
-            
             <div class="theme-switcher">
                 <label for="theme-toggle">Dark Mode</label>
                 <label class="switch">
@@ -70,30 +68,34 @@
 
         <main class="main-content">
             <header class="main-header">
-                <h1>Weekly Schedule</h1>
+                <h1>Tasks Completed</h1>
             </header>
-            
-            <section class="add-task-container">
-                <input type="text" id="new-task-input" placeholder="Enter a new task for today...">
-                <button id="add-task-btn">Add Task</button>
-            </section>
-
-            <section class="schedule-grid" id="schedule-grid">
-                </section>
-            
-            <section class="chatbot-container">
-                <h2>Planning Assistant</h2>
-                <div class="chat-window" id="chat-window">
-                    <div class="chat-message bot">
-                        <p>Hello! How can I help you plan your day?</p>
+            <section class="task-list-container">
+                <div class="task-list-item">
+                    <div class="task-item-content">
+                        <h3>Data Structures - Ch. 4</h3>
+                        <p class="text-muted">Completed: Monday</p>
                     </div>
                 </div>
-                <div class="chat-input-area">
-                    <input type="text" id="chat-input" placeholder="Ask me to add a task...">
-                    <button id="chat-send-btn">Send</button>
+                <div class="task-list-item">
+                    <div class="task-item-content">
+                        <h3>Review Calculus Notes</h3>
+                        <p class="text-muted">Completed: Monday</p>
+                    </div>
+                </div>
+                <div class="task-list-item">
+                    <div class="task-item-content">
+                        <h3>Algorithms - Sorting</h3>
+                        <p class="text-muted">Completed: Tuesday</p>
+                    </div>
+                </div>
+                <div class="task-list-item">
+                    <div class="task-item-content">
+                        <h3>Team Project Meeting</h3>
+                        <p class="text-muted">Completed: Wednesday</p>
+                    </div>
                 </div>
             </section>
-
         </main>
     </div>
 

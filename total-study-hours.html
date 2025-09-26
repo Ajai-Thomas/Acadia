@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Acadia Planner</title>
+    <title>Total Study Hours - Acadia Planner</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <header class="main-app-header">
@@ -43,7 +44,6 @@
                     </a>
                 </nav>
             </div>
-
             <div class="progress-chart">
                 <div class="chart-inner-text">
                     <span class="chart-percentage">72%</span>
@@ -58,7 +58,6 @@
             <div class="quote-block">
                 <p>"The secret of getting ahead is getting started."</p>
             </div>
-            
             <div class="theme-switcher">
                 <label for="theme-toggle">Dark Mode</label>
                 <label class="switch">
@@ -70,30 +69,24 @@
 
         <main class="main-content">
             <header class="main-header">
-                <h1>Weekly Schedule</h1>
+                <h1>Total Study Hours</h1>
             </header>
-            
-            <section class="add-task-container">
-                <input type="text" id="new-task-input" placeholder="Enter a new task for today...">
-                <button id="add-task-btn">Add Task</button>
-            </section>
-
-            <section class="schedule-grid" id="schedule-grid">
-                </section>
-            
-            <section class="chatbot-container">
-                <h2>Planning Assistant</h2>
-                <div class="chat-window" id="chat-window">
-                    <div class="chat-message bot">
-                        <p>Hello! How can I help you plan your day?</p>
-                    </div>
-                </div>
-                <div class="chat-input-area">
-                    <input type="text" id="chat-input" placeholder="Ask me to add a task...">
-                    <button id="chat-send-btn">Send</button>
-                </div>
-            </section>
-
+            <div class="chart-container">
+                <h3 class="chart-title">Weekly Study Hours</h3>
+                <svg id="study-hours-chart"></svg>
+            </div>
+            <div class="data-table-container">
+                <h3 class="chart-title">Weekly Breakdown</h3>
+                <table id="study-hours-table" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours Studied</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </main>
     </div>
 
